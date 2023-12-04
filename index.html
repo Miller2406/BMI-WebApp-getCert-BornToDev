@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- This webapp is about BMI calculation -->
+    <div class="container">
+      <h1>Welcome to the BMI calculatior</h1>
+      <div class="card">
+        <div class="display">
+          <h2 class="errMessage"></h2>
+          <div class="isResult">
+            <h2>THE RESULT</h2>
+            <span>Your BMI is : </span>
+            <span id="result">Calculating</span>
+            <p>
+              Mild Thinness 17 - 18.5 || Normal 18.5 - 25 || Overweight 25 - 30
+            </p>
+          </div>
+        </div>
+        <div class="input-box">
+          <form id="inputForm">
+            <input
+              id="weight"
+              onchange="onChangeWeight()"
+              type="number"
+              placeholder="Weight"
+              min="3"
+              max="200"
+            />
+            <input
+              onchange="onChangeHeight()"
+              id="height"
+              type="number"
+              placeholder="Height"
+              min="50"
+              max="300"
+            />
+            <button type="submit" class="submit">Calculate</button>
+          </form>
+        </div>
+      </div>
+      <div class="center">
+        <div id="healtyVid"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
